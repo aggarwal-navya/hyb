@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wishes and Memories </title>
+    <link rel="stylesheet" href="wish.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="memory-header">Memory💕❣</div>
+    
+        <div class="message-box">
+            <p>This is where you go back to where we started! We have not been to far in this journey of ours but this is just the starting. There is a long way ahead babe. So lets works hard for our better future and let's stick together.</p>
+        </div>
+    <button class="story-btn" onclick="showStory()">Show Story</button>
+
+    <div class="scroll-container">
+        <div class="image-box" onmouseover="showMessage('This is memory 1!')" onmouseout="hideMessage()">
+            <img src="img 1.jpg" alt="Memory 1">
+            <div class="image-message">This our first picture together. when we met on our college fest.</div>
+        </div>
+        
+        <div class="image-box" onmouseover="showMessage('This is memory 2!')" onmouseout="hideMessage()">
+            <img src="img 2.jpg" alt="Memory 2">
+            <div class="image-message">When we first went out for a date. Just a friendship one.</div>
+        </div>
+        
+        <div class="image-box" onmouseover="showMessage('This is memory 3!')" onmouseout="hideMessage()">
+            <img src="img 3.jpg" alt="Memory 3">
+            <div class="image-message">When we met at your houses and have a nice movie date.</div>
+        </div>
+        
+        <div class="image-box" onmouseover="showMessage('This is memory 4!')" onmouseout="hideMessage()">
+            <img src="img 4.jpg" alt="Memory 4">
+            <div class="image-message">Our first kiss with all the butterflies in our stomach. when we went to see the sunset.</div>
+        </div>
+        
+        <div class="image-box" onmouseover="showMessage('This is memory 5!')" onmouseout="hideMessage()">
+            <img src="img 5.jpg" alt="Memory 5">
+            <div class="image-message">Our first hackathon trip that we went for. For the first time i went out alone with you.</div>
+        </div>
+        
+        <div class="image-box" onmouseover="showMessage('This is memory 6!')" onmouseout="hideMessage()">
+            <img src="img 6.jpeg" alt="Memory 6">
+            <div class="image-message">The 2nd trip that we had.</div>
+        </div>
+    </div>
+    
+
+    <div class="buttons">
+        <button class="back-btn" onclick="window.location.href='index.html'">Back to Present</button>
+        <button class="next-btn" onclick="window.location.href='celebration.html'">Next Surprise 🎉</button>
+    </div>
+
+    <script src="wish.js"></script>
+</body>
+</html>
