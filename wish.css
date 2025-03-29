@@ -14,24 +14,24 @@ body {
 } 
 
 .memory-header {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bold;
     color: #df1141;
     transform: rotate(10deg);
     display: inline-block;
-    margin-bottom: 20px;
-    margin-top: -100px;
+    margin-bottom: 15px;
+    margin-top: -4px;
 }
 
 .message-box {
     background: linear-gradient(45deg, #ec4874, #ee27bc);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     transform: rotate(10deg);
     display: inline-block;
-    width: 450px;
-    height: 190px;
+    width: 35%;
+    height: auto;
 }
 
 .message-box p {
@@ -42,35 +42,34 @@ body {
 .story-btn {
     background: linear-gradient(45deg, #ca486b, #f861d2);
     color: #fcecf2;
-    font-size: 20px;
-    padding: 10px 20px;
+    font-size: 25px;
+    padding: 8px 16px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .story-btn:hover {
     background-color: #e4b5c5;
 }
 .scroll-container {
-    width: 1050px; /* Adjust width as needed */
+    width: 95%; /* Adjust width as needed */
     height: 450px; /* Set height to allow scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 10px;
-    border-radius: 1px;
     display: flex;
-    gap: 40px;
+    gap: 35px;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 
-.image-box {
+.image-box, .video-box {
     width: 250px;
     height: 1000px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background-color: #ff80bf;
     display: flex;
     flex-wrap: wrap;
@@ -81,44 +80,56 @@ body {
     cursor: pointer;
     overflow: hidden;
 }
- /* Add Different Tilts to Each Image Box */
-.image-box:nth-child(1) { transform: rotate(-8deg); }
-.image-box:nth-child(2) { transform: rotate(6deg); }
-.image-box:nth-child(3) { transform: rotate(-10deg); }
-.image-box:nth-child(4) { transform: rotate(4deg); }
-.image-box:nth-child(5) { transform: rotate(-6deg); }
-.image-box:nth-child(6) { transform: rotate(9deg); }
-.image-box:nth-child(7) { transform: rotate(-5deg); }
-.image-box:nth-child(8) { transform: rotate(7deg); }
-.image-box:nth-child(9) { transform: rotate(-3deg); }
-.image-box:nth-child(10) { transform: rotate(5deg); }
 
-.image-box:hover {
+ /* Add Different Tilts to Each Image & Video Box */
+.image-box:nth-child(1), .video-box:nth-child(1) { transform: rotate(-8deg); }
+.image-box:nth-child(2), .video-box:nth-child(2) { transform: rotate(6deg); }
+.image-box:nth-child(3), .video-box:nth-child(3) { transform: rotate(-10deg); }
+.image-box:nth-child(4), .video-box:nth-child(4) { transform: rotate(4deg); }
+.image-box:nth-child(5), .video-box:nth-child(5) { transform: rotate(-6deg); }
+.image-box:nth-child(6), .video-box:nth-child(6) { transform: rotate(9deg); }
+.image-box:nth-child(7), .video-box:nth-child(7) { transform: rotate(-5deg); }
+.image-box:nth-child(8), .video-box:nth-child(8) { transform: rotate(7deg); }
+.image-box:nth-child(9), .video-box:nth-child(9) { transform: rotate(-3deg); }
+.image-box:nth-child(10), .video-box:nth-child(10) { transform: rotate(5deg); }
+.image-box:nth-child(11), .video-box:nth-child(11) { transform: rotate(-10deg); }
+.image-box:nth-child(12), .video-box:nth-child(12) { transform: rotate(8deg); }  /* New Rotation */
+.image-box:nth-child(13), .video-box:nth-child(13) { transform: rotate(-7deg); } /* New Rotation */
+.image-box:nth-child(14), .video-box:nth-child(14) { transform: rotate(-12deg); }
+.image-box:nth-child(15), .video-box:nth-child(15) { transform: rotate(15deg); }
+.image-box:nth-child(16), .video-box:nth-child(16) { transform: rotate(-9deg); }
+.image-box:nth-child(17), .video-box:nth-child(17) { transform: rotate(-11deg); }
+
+
+.image-box:hover, .video-box:hover {
     transform: rotate(0deg) scale(1.05);
 }
 
-.image-box img {
+.image-box img, .video-box video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.image-message {
+.image-message, .video-message {
     display: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ec72a1;
-    font-size: 18px;
+    color: #f11d6e;
+    font-size: 14px;
+    
 }
 
-.image-box:hover .image-message {
+.image-box:hover .image-message,
+.video-box:hover .video-message {
     display: block;
-    background-color: #6460605d;
+    background-color: #f7e8e8e3;
     width: 100%;
 }
+
 .scroll-container::-webkit-scrollbar {
     width: 2px; /* Narrow scrollbar */
 }
@@ -139,7 +150,7 @@ body {
 
 /* Buttons */
 .buttons {
-    margin-top: 100px;
+    margin-top: 200px;
     display: flex; /* Use flex to align buttons in a row */
     gap: 900px; 
 }
@@ -147,8 +158,8 @@ body {
 .back-btn, .next-btn {
     background: linear-gradient(45deg, #e2426c, #e26fc5);
     color: #f8eef2;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 20px;
+    padding: 8px 14px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -172,3 +183,44 @@ body {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .memory-header {
+        font-size: 28px;
+    }
+    
+    .message-box {
+        width: 90%;
+        height: auto;
+    }
+    
+    .story-btn {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+
+    /* Image & Video Boxes Keep Original Size */
+    .image-box, .video-box {
+        width: 250px;
+        height: 1000px;
+    }
+
+    .image-message, .video-message {
+        font-size: 12px;
+    }
+    .image-box:hover .image-message,
+    .video-box:hover .video-message {
+        display: block;
+        background-color: #f7e8e8e3;
+        width: 100%;
+        opacity: 1;
+    }
+    .buttons {
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .back-btn, .next-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
