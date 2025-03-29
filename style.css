@@ -7,8 +7,6 @@
 
 /* Body styling */
 body {
-    margin: 0;
-    padding: 0;
     background: linear-gradient(45deg, #F48F99, #BD54A6);
     display: flex;
     justify-content: center;
@@ -16,52 +14,52 @@ body {
     height: 100vh;
     flex-direction: column;
     position: relative;
-    overflow: hidden; /* Prevent scrollbars */
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Box for birthday message */
 .birthday-message-box {
     background-color: #FFC5D3;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(230, 57, 57, 0.4); /* Increased shadow */    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(230, 57, 57, 0.4);
     opacity: 0;
     animation: boxAnimation 2s forwards;
-    margin-bottom: 30px;
-    justify-content: center;
-    position: absolute;
+    width: 90%;
+    max-width: 450px;
 }
 
 /* Birthday message styling */
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     color: #ff1a75;
     font-family: 'Arial', sans-serif;
-    margin: 0;
 }
-/* Styling for the button inside the birthday message box */
+
+/* Button */
 .celebrate-btn {
     background-color: #ff1a75;
     color: white;
-    font-size: 18px;
-    padding: 15px 30px;
+    font-size: 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    transition: 0.3s;
+    width: 100%;
 }
 
 .celebrate-btn:hover {
-    background-color: #ff80bf; /* Lighter pink on hover */
+    background-color: #ff80bf;
 }
 .celebrate-btn:active {
-    transform: scale(1.1); /* Slightly bigger when clicked */
-    box-shadow: 0 5px 15px rgba(255, 26, 117, 0.6); /* Enhanced shadow for a popping effect */
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    transform: scale(1.05);
 }
 
-/* Keyframe for fading in the birthday message box */
+/* Keyframe for fading in */
 @keyframes boxAnimation {
     0% {
         opacity: 0;
@@ -73,127 +71,67 @@ h1 {
     }
 }
 
-/* Keyframe for the popping animation */
+/* Floating animations */
 @keyframes pop {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2); /* Make the emoji grow slightly for a popping effect */
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0);
-    }
+    0% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0); }
 }
 
-/* Keyframe for sliding emojis down the screen */
 @keyframes slideDown {
-    0% {
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(50vh);
-    }
-    100% {
-        transform: translateY(100vh);
-        opacity: 1;
-    }
+    0% { transform: translateY(-100vh); opacity: 0; }
+    50% { transform: translateY(50vh); }
+    100% { transform: translateY(100vh); opacity: 1; }
 }
 
+/* Animation section */
 .animations {
-    justify-content: center;
-    top: 0;
-    left: 0;
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute; /* Ensure emojis cover the whole screen */
     pointer-events: none;
 }
 
-/* Styling for individual emojis */
+/* Floating elements */
 span {
-    font-size: 3rem; /* Adjust size of emojis */
+    font-size: 2rem; /* Smaller emojis for mobile */
     opacity: 0;
-    animation: pop 1s ease-out infinite, slideDown 9s ease-out infinite;
+    animation: pop 2s ease-out infinite, slideDown 5s ease-out infinite;
     position: absolute;
-    z-index: 1;
 }
 
-/* Example emoji classes with animation delays */
-.balloon {
-    animation-delay: 0s, 0s;
-    top: 5%;
-    left: 10%;
-}
+/* Emoji positioning */
+.balloon { animation-delay: 0s, 0s; top: 5%; left: 15%; }
+.flower { animation-delay: 0.1s, 0.5s; top: 20%; left: 30%; }
+.heart { animation-delay: 1s, 1.5s; top: 40%; left: 50%; }
+.gift { animation-delay: 1s, 0.5s; top: 60%; left: 70%; }
 
-.flower {
-    animation-delay: 1s, 0.5s;
-    top: 20%;
-    left: 30%;
-}
+.balloon2 { animation-delay: 0s, 0s; top: 45%; left: 50%; }
+.flower2 { animation-delay: 1s, 0.5s; top: 50%; left: 35%; }
+.heart2 { animation-delay: 1.5s, 1s; top: 65%; left: 15%; }
+.gift2 { animation-delay: 2s, 1.5s; top: 15%; left: 20%; }
 
-.heart {
-    animation-delay: 1s, 1.5s;
-    top: 40%;
-    left: 50%;
-}
+.balloon3 { animation-delay: 0.5s, 0s; top: 15%; left: 60%; }
+.flower3 { animation-delay: 1s, 0.5s; top: 70%; left: 45%; }
+.heart3 { animation-delay: 1.5s, 1s; top: 20%; left: 75%; }
+.gift3 { animation-delay: 2s, 1.5s; top: 70%; left: 50%; }
+/* Respnsive Design for Mobile */
+@media (max-width: 600px) {
+    .birthday-message-box {
+        padding: 20px;
+        border-radius: 12px;
+    }
 
-.gift {
-    animation-delay: 1s, 1.5s;
-    top: 60%;
-    left: 70%;
-}
+    h1 {
+        font-size: 24px;
+    }
 
-/* Additional emoji classes with different delays and positions */
-.balloon2 {
-    animation-delay: 0s, 0s;
-    top: 45%;
-    left: 50%;
-}
+    .celebrate-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
 
-.flower2 {
-    animation-delay: 1s, 0.5s;
-    top: 50%;
-    left: 35%;
-}
-
-.heart2 {
-    animation-delay: 1.5s, 1s;
-    top: 65%;
-    left: 75%;
-}
-
-.gift2 {
-    animation-delay: 2s, 1.5s;
-    top: 15%;
-    left: 20%;
-}
-
-/* Another set of emojis */
-.balloon3 {
-    animation-delay: 0s, 0s;
-    top: 20%;
-    left: 30%;
-}
-
-.flower3 {
-    animation-delay: 1s, 0.5s;
-    top: 50%;
-    left: 60%;
-}
-
-.heart3 {
-    animation-delay: 1s, 1.5s;
-    top: 70%;
-    left: 80%;
-}
-
-.gift3 {
-    animation-delay: 1s, 1.5s;
-    top: 30%;
-    left: 55%;
+    span {
+        font-size: 1.8rem; /* Slightly smaller emojis */
+    }
 }
