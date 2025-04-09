@@ -184,29 +184,36 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+
+
     .memory-header {
         font-size: 28px;
+        margin-top: 5px;
     }
     
     .message-box {
-        width: 90%;
+        width: 70%;
         height: auto;
+        margin-bottom: 18px;
     }
     
     .story-btn {
         font-size: 16px;
         padding: 8px 14px;
+        margin-top: 25px;
     }
 
-    /* Image & Video Boxes Keep Original Size */
+    /* Reduce the size of image and video boxes for mobile */
     .image-box, .video-box {
-        width: 250px;
-        height: 1000px;
+        width: 200px;  /* Decrease width */
+        height: 380px; /* Decrease height */
+        margin-bottom: 10px;
     }
 
     .image-message, .video-message {
         font-size: 12px;
     }
+    
     .image-box:hover .image-message,
     .video-box:hover .video-message {
         display: block;
@@ -214,8 +221,9 @@ body {
         width: 100%;
         opacity: 1;
     }
+    
     .buttons {
-        gap: 20px;
+        gap: 10px;
         margin-top: 50px;
     }
 
